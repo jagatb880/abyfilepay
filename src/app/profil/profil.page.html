@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar color="danger">
+  	<ion-buttons slot="start">
+	<ion-button (click)="Globale.navigate('/home')">
+	   <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+	 </ion-button>   
+    </ion-buttons>
+    <ion-title>{{Globale?.Translate.titre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+	<form (ngSubmit)="onSubmit()">
+      <ion-list>
+		<ion-item>
+          <ion-label color="dark">
+            <b>{{Globale?.Translate.ident}}</b>
+          </ion-label>
+        </ion-item>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item  lines="none">
+              <ion-button slot="start"  color="secondary" fill="outline">{{Globale?.Translate.userid}}: <ion-text color="dark">{{Infos?.utilisateurID}}</ion-text></ion-button>
+              
+            </ion-item>
+			<ion-item  lines="none">
+              <ion-button slot="start"  color="secondary" fill="outline">{{Globale?.Translate.lrole}}: <ion-text color="dark">{{Infos?.Role}}</ion-text></ion-button>
+              
+            </ion-item>
+			<ion-item  lines="none">
+              <ion-button slot="start"  color="secondary" fill="outline">{{Globale?.Translate.lnumber}}: <ion-text color="dark">{{Infos?.Mobile}}</ion-text></ion-button>
+              
+            </ion-item>
+			<ion-item  lines="none">
+              <ion-button slot="start"  color="secondary" fill="outline">{{Globale?.Translate.lnom}}: <ion-text color="dark">{{Infos?.Nom}}</ion-text></ion-button>
+              
+            </ion-item>
+          </ion-menu-toggle>
+		
+       <ion-item>
+          <ion-label color="dark">
+            <b>{{Globale?.Translate.appareil}}</b>
+          </ion-label>
+        </ion-item>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item  lines="none">
+              <ion-button slot="start"  color="secondary" fill="outline">{{Globale?.Translate.modele}}: <ion-text color="dark">{{Infos?.Modele}}</ion-text></ion-button>
+              
+            </ion-item>
+			<ion-item  lines="none">
+              <ion-button slot="start"  color="secondary" fill="outline">{{Globale?.Translate.fabricant}}: <ion-text color="dark">{{Infos?.Fabricant}}</ion-text></ion-button>
+              
+            </ion-item>
+			<ion-item  lines="none">
+              <ion-button slot="start"  color="secondary" fill="outline">{{Globale?.Translate.version}}: <ion-text color="dark">{{Infos?.Version}}</ion-text></ion-button>
+              
+            </ion-item>
+			<ion-item  lines="none">
+              <ion-button slot="start"  color="secondary" fill="outline">{{Globale?.Translate.imei}}: <ion-text color="dark">{{Infos?.Imei}}</ion-text></ion-button>
+              
+            </ion-item>
+          </ion-menu-toggle>
+		  <ion-item>
+          <ion-label color="dark">
+            <b>{{Globale?.Translate.localise}}</b>
+          </ion-label>
+        </ion-item>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item  lines="none">
+              <ion-button slot="start"  color="secondary" fill="outline">{{Globale?.Translate.lpays}}: <ion-text color="dark">{{Infos?.Pays}}</ion-text></ion-button>
+              
+            </ion-item>
+			<ion-item  lines="none">
+              <ion-button slot="start"  color="secondary" fill="outline">{{Globale?.Translate.lregion}}: <ion-text color="dark">{{Infos?.Region}}</ion-text></ion-button>
+              
+            </ion-item>
+			<ion-item  lines="none">
+              <ion-button slot="start"  color="secondary" fill="outline">{{Globale?.Translate.lville}}: <ion-text color="dark">{{Infos?.Ville}}</ion-text></ion-button>
+              
+            </ion-item>
+			<ion-item  lines="none">
+              <ion-button slot="start"  color="secondary" fill="outline">{{Globale?.Translate.lquartier}}: <ion-text color="dark">{{Infos?.Quartier}}</ion-text></ion-button>
+              
+            </ion-item>
+          </ion-menu-toggle>
+      </ion-list>
+	  
+    
+    
+  </form>
+</ion-content>

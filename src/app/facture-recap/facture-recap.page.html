@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{Globale?.Translate.trdetail}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+<ion-grid>
+  <ion-row>
+
+    <ion-col text-center>
+      <img src="{{image}}" alt=""  class="image-logo" />
+    </ion-col>
+  </ion-row>  
+</ion-grid>
+<ion-row class="tligne" *ngIf="datas?.warning">
+    
+  <ion-col text-center><ion-text color="danger">{{datas?.message}}</ion-text></ion-col>
+  </ion-row>  
+<ion-grid *ngFor="let data of Datas;">
+<ion-row>
+    <ion-col text-center color="primary"><u><b>{{Globale?.Translate.trdetail}} </b></u></ion-col>
+  </ion-row> 
+  <ion-row class="ligne">
+    <ion-col text-right><b>{{Globale?.Translate.lclient}} </b></ion-col>
+  <ion-col text-left>{{data?.customer}}</ion-col>
+  </ion-row> 
+  <ion-row class="ligne" color="light">
+    <ion-col text-right><b>{{Globale?.Translate.lnumber}} </b></ion-col>
+  <ion-col text-left>{{data?.facture}}</ion-col>
+  </ion-row>
+  <ion-row class="ligne"*ngIf="data?.date">
+    <ion-col text-right><b>{{Globale?.Translate.ldate}}  </b></ion-col>
+  <ion-col text-left>{{data?.date}}</ion-col>
+  </ion-row> 
+  <ion-row class="ligne">
+    <ion-col text-right><b>{{Globale?.Translate.lmontant}} </b></ion-col>
+  <ion-col text-left>{{data?.montant}} XAF</ion-col>
+  </ion-row>
+    <ion-row class="ligne">
+    <ion-col text-right><b>{{Globale?.Translate.lfrais}} </b></ion-col>
+  <ion-col text-left>{{data?.frais}}</ion-col>
+  </ion-row>
+<ion-row class="tligne">
+    <ion-col text-right>{{Globale?.Translate.ltotal}} </ion-col>
+  <ion-col text-left>{{data?.total}} XAF</ion-col>
+  </ion-row> 
+
+</ion-grid>
+<ion-row class="tligne" *ngIf="datas?.warning">
+    
+  <ion-col text-center><ion-text color="danger">{{datas?.message}}</ion-text></ion-col>
+  </ion-row>   
+    <ion-grid>
+      <ion-row>
+        <ion-col text-right>
+			  <ion-button color="light"  (click)="Globale.navigate('/home')">{{Globale?.Translate.btncancel}} </ion-button>
+			  <ion-button color="primary"  type="submit" *ngIf="!datas?.warning">{{Globale?.Translate.btnpaye}} </ion-button>
+			  </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

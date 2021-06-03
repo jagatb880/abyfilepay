@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{Globale?.Translate.titre}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+<ion-grid>
+  <ion-row>
+
+    <ion-col text-center>
+      <img src="{{image}}" alt=""  class="image-logo" />
+    </ion-col>
+
+  </ion-row>  
+</ion-grid>
+<ion-list>
+        <ion-list-header>{{Label}} <b>{{contrat}}</b></ion-list-header>
+          <ion-item *ngFor="let p of Factures;">
+            <input type="checkbox" ngModel slot="start" name="{{p.number}}" id="{{p.number}}">&nbsp; 
+            <label for="{{p.number}}">{{p.date}}</label>
+          </ion-item>
+        </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col text-right>
+        <ion-button color="light"  (click)="Globale.navigate('/home')">{{Globale?.Translate.btncancel}} </ion-button>
+        
+        <ion-button color="primary"  type="submit">{{Globale?.Translate.btncontinue}} </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    
+  </form>
+</ion-content>

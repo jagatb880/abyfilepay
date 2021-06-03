@@ -1,5 +1,7 @@
 {
   "name": "abyfilepay",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

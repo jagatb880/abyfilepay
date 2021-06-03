@@ -1,0 +1,79 @@
+{
+"abyfourecap":
+{
+"debut":"Vous allez commencer la transaction"
+}
+,"abyfou":
+{
+"lexp":"Expediteur","lmontant":"Montant","loadconv":"Lancement de la conversion","lrecpt":"Recepteur","texp":"Nom Expediteur","titre":"Flash Convertisseur","tmontant":"Entrer le montant","trecpt":"Nom r\u00e9cepteur"
+}
+,"afric":
+{
+"vnumber":"Le num\u00e9ro n'est pas valide pour l'operateur"
+}
+,"agent":
+{
+"cagent":"Votre Agent  \u00e9t\u00e9 ajout\u00e9 !"
+}
+,"global":
+{
+"an18":"Vous devez avoir plus de 18 ans","btncancel":"Annuler","btncontinue":"Continue","charge":"Chargement ...","de":"de","disconnect":"\u00cates vous s\u00fbre de vouloir vous d\u00e9connecter ?","msgalert":"Message d'alerte","msgconfirm":"Message de confirmation","msgvmontant":"Le montant n'est valide","msgvnumber":"Le num\u00e9ro n'est pas valide","oblige":"Les champs obligatoire ne sont pas remplis","ouvrir":"Ouvrir une session","spassword":"Les champs mot de passe doivent \u00eatre identique","verif":"Verification","vers":"vers"
+}
+,"cashrecap":
+{
+"termine":"Vous aller terminer cette op\u00e9ration !"
+}
+,"contact":
+{
+"call":"Ou appelez le (237) 676 888 888","titre":"Nous contacter","via":"Contactez nous via"
+}
+,"creditcompte":
+{
+"recharge":"Vous allez recharger le compte","success":"Recharge effectu\u00e9e avec success !"
+}
+,"factureforfait":
+{
+"oblige":"Le num\u00e9ro abonn\u00e9 est obligatoire !","vabon":"Le num\u00e9ro abonn\u00e9 est obligatoire !","vabonne":"Le num\u00e9ro abonn\u00e9 est obligatoire !"
+}
+,"factureliste":
+{
+"vservice":"Vous devez selectionner au moins un service !"
+}
+,"facturerecap":
+{
+"paye":"Vous aller payer cette facture"
+}
+,"home":
+{
+"admin":"Administration","comm":"Commission","connect":"Connect\u00e9","disconnect":"D\u00e9connexion","mcompte":"Mon compte","point":"Points","remonte":"Vous allez remonter les commissions !","solde":"Solde principal"
+}
+,"identifie":
+{
+"continue":"Continuer","cpassword":"Confirmer le mot de passe","daten":"Date de naissance","femi":"F\u00e9minin","lieu":"Lieu de naissance","masc":"Masculin","nom":"Nom","numero":"Num\u00e9ro","password":"Mot de passe","prenom":"Pr\u00e9nom","profession":"Profession","sexe":"Sexe","titre":"Informations personnelles"
+}
+,"localise":
+{
+"annule":"Annuler","cni":"Carte d'identit\u00e9","continue":"Continuer","datexp":"Date expiration","load":"Chargement","numero":"Numero de pi\u00e8ce","passport":"Passeport","quartier":"Quartier","region":"R\u00e9gion","titre":"Localisation et pi\u00e8ce","type":"Type de pi\u00e8ce","ville":"Ville"
+}
+,"login":
+{
+"besoin":"Besoin d'un compte","choix":"Choisir une langue","connect":"Connexion","forget":"Mot de passe oubli\u00e9e","french":"Fran\u00e7ais","newcompte":"Nouveau compte","number":"Num\u00e9ro","numbers":"Mes num\u00e9ros","password":"Mot de passe","souhait":"Souhaitez vous utiliser un nouveau compte"
+}
+,"reloadclient":
+{
+"vnumber":"Le num\u00e9ro n'est pas valide pour l'operateur"
+}
+,"reload":
+{
+"vnumber":"Le num\u00e9ro n'est pas valide pour l'operateur"
+}
+,"suscribe":
+{
+"agent":"Compte AGENT","partner":"Devenez partenaire","perso":"Compte personnel","titre":"Cr\u00e9er votre compte","type":"Type de compte","welcome":"Welcome to Flash Pay"
+}
+,"verifie":
+{
+"appareil":"Type T\u00e9l\u00e9phone","code":"Code inscription","ident":"Identifiant","nom":"Votre nom","phone":"T\u00e9l\u00e9phone","role":"R\u00f4le","stitre":"Votre inscription est termin\u00e9","termine":"Terminer","titre":"Terminer votre inscription","tvalide":"Conserver ce code por valider votre inscription"
+}
+
+}

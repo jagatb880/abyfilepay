@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+	<ion-button (click)="Globale.navigate('/home')">
+	   <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+	 </ion-button>   
+    </ion-buttons>
+    <ion-title>{{Globale.Translate?.titre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+<ion-grid>
+  <ion-row>
+
+    <ion-col text-center>
+      <img src="{{image}}" alt="" class="image-logo" />
+    </ion-col>
+
+  </ion-row>  
+
+</ion-grid>
+      
+		<ion-list>
+	<ion-item (click)="presentPopover(Pays)">
+		<img src="{{pays.logo}}" alt="" class="image-icone" hspace="4" vspace="4"/>
+		 {{pays.nom}} 
+		 <ion-buttons slot="end">
+			  <ion-icon name="arrow-dropdown"></ion-icon>
+			</ion-buttons>
+	</ion-item>
+        <ion-item>
+          <ion-label position="floating" color="primary"><b>{{Globale.Translate?.lnumber}}</b></ion-label>
+          <ion-input #N type="number" ngModel name="number" placeholder="{{Globale.Translate?.tnumber}}"></ion-input>
+        </ion-item>
+        <ion-item  *ngIf="isRange">
+          <ion-label position="floating" color="primary" position="stacked"><b>{{Globale.Translate?.lmontant}}</b></ion-label>
+          <ion-select #O  ngModel okText="{{Globale?.Translate.btncontinue}}" cancelText="{{Globale?.Translate.btncancel}}" name="montant" placeholder="{{Globale.Translate?.tmontant}}">
+			  <ion-select-option *ngFor="let cc of Forfaits" value="{{ cc}}">
+				{{ cc}}
+			  </ion-select-option>
+			</ion-select>
+        </ion-item>
+		<ion-item  *ngIf="isFixed">
+          <ion-label position="floating" color="primary" position="stacked"><b>{{Globale.Translate?.lmontant}}</b> [{{odata?.min}} - {{odata?.max}}] {{odata?.devise}}</ion-label>
+          <ion-input type="number"   ngModel name="montant" placeholder="[{{odata?.min}} - {{odata?.max}}] {{odata?.devise}}"></ion-input> 
+        </ion-item>
+      </ion-list>
+      
+    <ion-grid>
+      <ion-row>
+        <ion-col text-right>
+        <ion-button color="success"  (click)="valideNumber(opera.code,N.value)">{{Globale.Translate?.btnverifie}}</ion-button>
+        
+        <ion-button color="primary"  type="submit" *ngIf="isnumber">{{Globale.Translate?.btncontinue}}</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    
+  </form>
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+	<ion-button (click)="Globale.navigate('/home')">
+	   <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+	 </ion-button>   
+    </ion-buttons>
+    <ion-title>{{Globale.Translate?.titre}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+<ion-grid>
+  <ion-row>
+
+    <ion-col text-center>
+      <img src="{{image}}" alt="" class="image-logo" />
+    </ion-col>
+
+  </ion-row>  
+</ion-grid>
+<ion-grid>
+	<ion-row>
+    <ion-col text-center><b>{{Globale.Translate?.trdetail}}</b></ion-col>
+  </ion-row>
+  <ion-row class="ligne">
+    <ion-col text-right>{{Globale.Translate?.lclient}}</ion-col>
+	<ion-col>{{data?.opera}}</ion-col>
+  </ion-row> 
+  <ion-row class="ligne">
+    <ion-col text-right>{{Globale.Translate?.lnumber}}</ion-col>
+	<ion-col>{{data?.number}}</ion-col>
+  </ion-row> 
+  <ion-row class="ligne">
+    <ion-col text-right>{{Globale.Translate?.lmontant}}</ion-col>
+	<ion-col>{{data?.montant}} XAF ({{data?.convertis}})</ion-col>
+  </ion-row>
+  <ion-row class="ligne">
+    <ion-col text-right>{{Globale.Translate?.lfrais}}</ion-col>
+  <ion-col>{{data?.frais}} XAF</ion-col>
+  </ion-row>
+<ion-row class="tligne">
+    <ion-col text-right>{{Globale.Translate?.ltotal}}</ion-col>
+	<ion-col>{{data?.total}} XAF </ion-col>
+  </ion-row>  
+</ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col text-right>
+			  <ion-button color="light"  (click)="Globale.navigate('/afric')">{{Globale.Translate?.btncancel}}</ion-button>
+			  
+			  <ion-button color="primary"  type="submit">{{Globale.Translate?.btntermine}}</ion-button>
+			  </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

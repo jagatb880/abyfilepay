@@ -1,0 +1,35 @@
+<ion-header padding>
+<ion-text class="head-text">
+	{{Globale?.Translate.titre}}
+</ion-text> 
+</ion-header>
+<ion-content>
+
+<ion-grid>
+	<ion-row>
+		<ion-col class="titre" text-center>
+		    <ion-text>{{Globale?.Translate.texte}} {{ID}} ({{Nom}})</ion-text>
+		</ion-col>
+	</ion-row>
+
+</ion-grid>
+<form #loginForm="ngForm" (ngSubmit)="rechargerAgent(loginForm)">
+<ion-grid>
+		<ion-row>
+          <ion-col text-center>
+            <ion-item>
+            <ion-label position="floating" color="primary">
+              {{Globale?.Translate.lmontant}}
+            </ion-label>
+               <ion-input  ngModel type="number"  name="montant" id="montant" placeholder="{{Globale?.Translate.tmontant}}"></ion-input>
+          </ion-item>
+          </ion-col>
+        </ion-row>
+    <ion-row>
+          <ion-col text-center>
+            <ion-button color="primary" size="small" type="submit">{{Globale?.Translate.btncrediter}}</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid> 
+</form>	  
+<ion-content>

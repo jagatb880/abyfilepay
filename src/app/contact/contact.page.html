@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+	<ion-button (click)="Globale.navigate('/home')">
+	   <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+	 </ion-button>   
+    </ion-buttons>
+    <ion-title>
+     {{Globale?.Translate.titre}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <div  class="home-image" text-center>
+        <img src="/assets/logo/home-logo.png" alt="" class="imge" style="width: 125px;"/>
+    </div>
+  
+<ion-list>
+  <ion-item lines="none">
+   {{Globale?.Translate.via}}
+
+  </ion-item>
+  </ion-list>
+  
+    <ion-button color="secondary" class="submit-btn" expand="full" (click)="openLink()">
+      <ion-icon slot="start" name="logo-whatsapp"></ion-icon> Whatapps</ion-button>
+  <ion-list>
+  <ion-item lines="none">
+      {{Globale?.Translate.call}}
+  </ion-item>
+</ion-list>
+<ion-grid *ngIf="Error">
+        <ion-row>
+          <ion-col text-right>
+            <ion-text color="danger" (click)="Globale.navigate('/logs')">Errors applications</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-content>

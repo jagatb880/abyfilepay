@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar color="danger">
+	<ion-buttons slot="start">
+	<ion-button (click)="Globale.navigate('/home')">
+	   <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+	 </ion-button>   
+    </ion-buttons>
+    <ion-title>{{Globale?.Translate.titre}}</ion-title>
+	
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="actualise(searchForm)" color="secondary">
+      <ion-icon name="refresh"></ion-icon>
+    </ion-fab-button>
+ </ion-fab>
+<form #searchForm="ngForm" (ngSubmit)="actualise(searchForm)">
+<ion-grid>
+			<ion-row>
+				<ion-col class="titre">
+				<ion-item>
+  <ion-label position="floating" color="primary"><b>{{Globale?.Translate.lfrom}}</b></ion-label>
+  <ion-input type="date"   
+                     ngModel 
+                     name="ddebut"
+                     placeholder="{{Globale?.Translate.lclient}}" 
+                     id="datenais" value="{{Resultat?.ddate}}"></ion-input>
+</ion-item>
+
+<ion-item>
+ <ion-label position="floating" color="primary"><b>{{Globale?.Translate.lto}}</b></ion-label>
+  <ion-input type="date"   
+                     ngModel 
+                     name="dfin"
+                     placeholder="{{Globale?.Translate.lclient}}" 
+                     id="datenais" value="{{Resultat?.fdate}}"></ion-input>
+</ion-item>	
+				</ion-col>
+			</ion-row>
+			
+</ion-grid>	
+</form>		
+	<ion-item  *ngFor="let p of Resultat?.liste" no-padding lines="none">
+		<ion-grid>
+			<ion-row color="danger">
+				<ion-col no-padding>
+					<ion-button fill="outline" expand="full" color="{{p.Color}}">{{p.Type_trx}} </ion-button >
+				</ion-col>
+			</ion-row>
+			<ion-row>
+			<ion-col no-padding text-center size="2" class="icontent">
+			<img src="{{p.Logo}}" alt="" class="imge" style="max-width: 48px;"/>
+			</ion-col>
+			<ion-col text-left class="content" no-padding  size="4">{{p.TransactionID}}<br>
+					<ion-text fill="outline" expand="full" color="{{p.Color}}"><b>{{p.Gain}}</b></ion-text >
+				</ion-col>
+				<ion-col no-padding size="6" class="content">	
+					{{Globale?.Translate.lnumber}}:<b>{{p.Auteur}}</b><br>
+					<u>{{p.Jour}}</u>
+					
+				</ion-col>
+				
+			</ion-row>
+		</ion-grid>
+	</ion-item>
+	<ion-grid>
+			<ion-row>
+				<ion-col text-center no-padding>
+					<ion-button color="primary" size="small" (click)="moveTo('deb')" *ngIf="Resultat?.page>1"><<</ion-button>
+					<ion-button color="primary"  size="small" (click)="moveTo('prev')" *ngIf="Resultat?.page>1"><</ion-button>
+					<ion-button shape="round" fill="outline"  size="small" >{{Resultat?.inf}}-{{Resultat?.sup}}/{{Resultat?.total}}, Page {{Resultat?.page}}/{{Resultat?.last}}</ion-button>
+					<ion-button color="primary"  size="small" (click)="moveTo('next')" *ngIf="Resultat?.page<Resultat?.last">></ion-button>
+					<ion-button color="primary"  size="small" (click)="moveTo('last')" *ngIf="Resultat?.page!=Resultat?.last">>></ion-button>
+				</ion-col>
+			</ion-row>
+	</ion-grid>
+</ion-content>

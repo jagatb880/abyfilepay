@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="danger">
+  	<ion-buttons slot="start">
+	<ion-button (click)="Globale.navigate('/login')">
+	   <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+	 </ion-button>   
+    </ion-buttons>
+    <ion-title>Applications Errors</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+    
+  <ion-grid *ngFor="let p of Globale?.Errors ">
+    <ion-row>
+          <ion-col>
+            
+           <ion-text color="danger">{{p}}</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>     
+       <ion-grid>
+    <ion-row>
+          <ion-col text-center>
+            <ion-button color="danger" expand="full" class="submit-btn" type="button"  (click)="clearLog();">Clear all logs</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+</ion-content>
+

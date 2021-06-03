@@ -1,0 +1,14 @@
+<ion-header padding>
+<ion-text (click)="close(3)">
+	{{infos?.titre}}
+</ion-text> 
+</ion-header>
+<ion-content>
+<ion-searchbar type="text" debounce="500" (ionInput)="getItems($event)"placeholder="{{Globale?.Translate.lsearch}}"></ion-searchbar>
+  <ion-list *ngIf="isItemAvailable">
+    <ion-item *ngFor="let item of items" (click)="close(item.code)">
+		<img src="{{item.logo}}" alt="" class="image-icone" hspace="4" vspace="4"/>
+		 {{item.nom}}
+	</ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar color="danger">
+  <ion-buttons slot="start">
+	<ion-button (click)="Globale.navigate('/home')">
+	   <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+	 </ion-button>   
+    </ion-buttons>
+    <ion-title>{{Globale?.Translate.titre}}</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="actualise(searchForm)" color="secondary">
+      <ion-icon name="refresh"></ion-icon>
+    </ion-fab-button>
+ </ion-fab>
+<form #searchForm="ngForm" (ngSubmit)="actualise(searchForm)">
+<ion-grid no-padding *ngIf="IsDate">
+			<ion-row>
+				<ion-col class="titre" no-padding>
+				<ion-item>
+				<ion-label position="floating" color="primary"><b>{{Globale?.Translate.lfrom}}</b></ion-label>
+  <ion-input type="date"   
+                     ngModel 
+                     name="ddebut"
+                     placeholder="{{Globale?.Translate.tdatedebut}}" 
+                     id="datenais" value="{{Resultat?.ddate}}"></ion-input>
+</ion-item>
+
+<ion-item>
+<ion-label position="floating" color="primary"><b>{{Globale?.Translate.lto}}</b></ion-label>
+  <ion-input type="date"   
+                     ngModel 
+                     name="dfin"
+                     placeholder="{{Globale?.Translate.tdatefin}}" 
+                     id="datenais" value="{{Resultat?.fdate}}"></ion-input>
+</ion-item>	
+				</ion-col>
+			</ion-row>
+</ion-grid>	
+<ion-grid no-padding *ngIf="IsFiltre">
+			<ion-row>
+				<ion-col class="titre" no-padding>
+				<ion-item>
+          <ion-label><ion-button shape="round" fill="outline"  size="small">{{Resultat?.labelsearch}}</ion-button></ion-label>
+          <ion-select name="filtre" placeholder="--Choisir--" ngModel  (ionChange)="actualise(searchForm)"  okText="{{Globale?.Translate.btncontinue}}" cancelText="{{Globale?.Translate.btncancel}}" value="">
+		  <ion-select-option value="" >--{{Globale?.Translate.tafficher}}--</ion-select-option>
+            <ion-select-option value="{{p?.IDService}}" *ngFor="let p of Resultat?.filtre"> {{p?.Nom}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+</ion-col>
+			</ion-row>
+</ion-grid>	
+</form>		
+	<ion-item *ngFor="let p of Resultat?.liste" no-padding  lines="none">
+		<ion-grid>
+			<ion-row color="danger">
+				<ion-col no-padding>
+					<ion-button fill="outline" expand="full" color="{{p.Color}}" (click)="moveToTransaction('/transaction-detail',p.TransactionID)">{{p.Trx_type}}</ion-button >
+				</ion-col>
+			</ion-row>
+			<ion-row>
+			
+			<ion-col no-padding text-center size="2" class="icontent">
+			<img src="{{p.Logo}}" alt="" class="imge" style="max-width: 40px;"/>
+			</ion-col>
+				<ion-col no-padding size="6" class="content">	
+					{{Globale?.Translate.lmontant}} :<b>{{p.montant}}</b><br>
+					{{Globale?.Translate.lto}}:<b>{{p.Beneficiare}}</b><br>
+					{{Globale?.Translate.ldate}} :<b>{{p.Jour}}</b>
+					
+				</ion-col>
+				<ion-col class="content" no-padding  size="4"><b>{{Globale?.Translate.lnumber}} </b>{{p.TransactionID}}<br>
+					<ion-text color="{{p.Color}}" size="small">{{p.Statut}}</ion-text><br>
+					<ion-text color="secondary" size="small"><b>{{p.Auteur}}</b></ion-text>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-item>
+	<ion-grid>
+			<ion-row>
+				<ion-col text-center no-padding>
+					<ion-button color="primary" size="small" (click)="moveTo('deb')" *ngIf="Resultat?.page>1"><<</ion-button>
+					<ion-button color="primary"  size="small" (click)="moveTo('prev')" *ngIf="Resultat?.page>1"><</ion-button>
+					<ion-button shape="round" fill="outline"  size="small" >{{Resultat?.inf}}-{{Resultat?.sup}}/{{Resultat?.total}}, Page {{Resultat?.page}}/{{Resultat?.last}}</ion-button>
+					<ion-button color="primary"  size="small" (click)="moveTo('next')" *ngIf="Resultat?.page<Resultat?.last">></ion-button>
+					<ion-button color="primary"  size="small" (click)="moveTo('last')" *ngIf="Resultat?.page!=Resultat?.last">>></ion-button>
+				</ion-col>
+			</ion-row>
+	</ion-grid>
+	
+
+
+</ion-content>

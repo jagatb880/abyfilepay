@@ -1,0 +1,75 @@
+<script src="md5.js"></script>
+<ion-content padding>
+  <ion-grid>
+        <ion-row>
+          <ion-col text-right>
+            <ion-text color="primary" (click)="Globale.navigate('/contact')">{{Globale?.Translate.forget}}</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    <div  class="home-image" text-center>
+        <img src="/assets/logo/home-logo.png" alt="" class="imge" style="width: 200px;"/>
+    </div>
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+      <ion-list lines="full" class="ion-no-margin ion-no-padding">
+   <ion-grid>
+
+		<ion-row >
+          <ion-col text-center>
+		  <ion-item (click)="presentPopover(langues)">
+		<img src="{{langue?.logo}}" alt="" class="image-icone" hspace="4" vspace="4"/>
+		 {{langue?.nom}} 
+		 <ion-buttons slot="end">
+			  <ion-icon name="arrow-dropdown"></ion-icon>
+			</ion-buttons>
+	</ion-item>
+		  
+           <ion-item lines="none">
+		   <ion-label>{{Globale?.Translate?.numbers}} </ion-label>
+		   <ion-select #C ngModel name="number" (ionChange)="nouveau(C.value)" *ngIf="!Nouveau" okText="{{Globale?.Translate.btncontinue}}" cancelText="{{Globale?.Translate.btncancel}}"  interface="popover">
+      <ion-select-option value="{{p}}" *ngFor="let p of Logins" >{{p}}</ion-select-option>
+      <ion-select-option value="new_account">{{Globale?.Translate?.newcompte}}</ion-select-option>
+	</ion-select>
+		   <input type="number" ngModel name="number" id="number" placeholder="{{Globale?.Translate?.number}}" value="{{LastLogin}}"  *ngIf="Nouveau"/>
+        </ion-item>
+		
+          </ion-col>
+        </ion-row>
+		<ion-row>
+          <ion-col text-center>
+            <ion-item lines="none">
+               <input type="{{passtype}}" ngModel name="password" id="password" placeholder="{{Globale?.Translate?.password}}">
+            <button ion-button clear class="eye-icon-btn" type="button" item-right (click)="managePassword()"><ion-icon name="{{passeye}}"></ion-icon></button>
+          </ion-item>
+          </ion-col>
+        </ion-row>
+    <ion-row>
+          <ion-col text-center>
+            <ion-button color="primary" expand="full" class="submit-btn" type="submit">{{Globale?.Translate?.connect}}</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>     
+          
+     <ion-grid>
+    <ion-row>
+          <ion-col text-center>
+            <hr>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+        <ion-grid>
+    <ion-row>
+          <ion-col text-center>
+            <ion-button color="danger" expand="full" class="submit-btn" type="button"  (click)="Globale.navigate('/suscribe')">{{Globale?.Translate?.besoin}}</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      </ion-list>
+    
+    
+      
+  </form>
+
+
+</ion-content>

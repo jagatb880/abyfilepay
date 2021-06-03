@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>{{Globale?.Translate.titre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div  class="home-image" text-center>
+        <img src="/assets/logo/home-logo.png" alt="" class="imge" style="width: 70px;"/>
+    </div>
+	<ion-grid>
+  <ion-row class="head">
+    <ion-col><b>{{Globale?.Translate.stitre}}</b></ion-col>
+  </ion-row>
+  <ion-row class="ligne">
+    <ion-col text-right>{{Globale?.Translate.nom}}</ion-col>
+  <ion-col><b>{{Data?.Nom}}</b></ion-col>
+  </ion-row> 
+  <ion-row class="ligne">
+    <ion-col text-right>{{Globale?.Translate.ident}} </ion-col>
+  <ion-col><b>{{Data?.UtilisateurID}}</b></ion-col>
+  </ion-row> 
+  <ion-row class="ligne">
+    <ion-col text-right>{{Globale?.Translate.phone}}</ion-col>
+  <ion-col><b>{{Data?.Mobile}}</b></ion-col>
+  </ion-row> 
+  <ion-row class="ligne">
+    <ion-col text-right>{{Globale?.Translate.role}}</ion-col>
+  <ion-col>{{Data?.Role}}</ion-col>
+  </ion-row>
+  <ion-row class="ligne">
+    <ion-col text-right>{{Globale?.Translate.appareil}}</ion-col>
+  <ion-col>{{Data?.Appareil}}</ion-col>
+  </ion-row>
+  <ion-row class="ligne">
+    <ion-col text-right>{{Globale?.Translate.code}}</ion-col>
+  <ion-col><ion-button  color="danger" fill="outline">{{Data?.CodeVerification}}</ion-button></ion-col>
+  </ion-row>
+ 
+</ion-grid>
+	  <ion-grid>
+        <ion-row>
+          <ion-col text-center>
+           {{Globale?.Translate.tvalide}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-button color="primary"   expand="full" (click)="moveToPage('login',{})">{{Globale?.Translate.termine}}</ion-button>
+
+</ion-content>

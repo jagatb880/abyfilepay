@@ -74,4 +74,111 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** mycolor **/
+  --ion-color-mycolor: #000;
+  --ion-color-mycolor-rgb: 244, 244, 244;
+  --ion-color-mycolor-contrast: #000000;
+  --ion-color-mycolor-contrast-rgb: 0, 0, 0;
+  --ion-color-mycolor-shade: #d7d8da;
+  --ion-color-mycolor-tint: #f5f6f9;
+
+  /* Set the background of the entire app */
+  --ion-background-color: #FFFFFF;
+
+  /* Set the font family of the entire app */
+  --ion-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto", sans-serif;
+}
+.small
+{
+  font-size:11px;
+  text-align: justify;
+  line-height: 125%;
+}
+.smallink
+{
+  font-size:12px;
+  text-align: justify;
+  line-height: 125%;
+}
+ion-content, ion-header,ion-item,ion-list,ion-text
+{
+  font-family:Tahoma,verdana;
+}
+ion-content 
+{
+  font-size:15px;
+}
+// TEXT AND OBJECTS
+.small-text 
+{
+  font-size:25px;
+}
+.head-text 
+{
+  font-size:25px;
+}
+.middle-text 
+{
+  font-size:25px;
+}
+.big-text 
+{
+  font-size:25px;
+}
+.label-text 
+{
+  font-size:25px;
+}
+.vcenter
+{
+  padding-top:40px;
+}
+.small-button 
+{
+font-size:12px; padding:12px;
+}
+
+.head
+{
+	background-color:#3880ff;
+	color:#FFF;
+	padding:8px;
+	font-weight:bold;
+}
+.ligne
+{
+	border-bottom:1px solid #b2afaf;
+	padding:8px;
+	color:#333;
+	background-color:#fff;
+}
+.tligne
+{
+	padding:4px;
+	color:#000;
+	background-color:#fff;
+	font-weight:bold;
+}
+.icon-normal
+ {
+        font-size: 60px;
+ }
+.image-logo 
+{
+	width:80%;
+	max-width:150px;
+	max-height:150px;
+}
+.image-icone 
+{
+	max-width:28px;
+	max-height:28px;
+}
+input[type=number],input[type=text],input[type=password]
+{
+	width:100%;
+	border-radius: 4px;
+	border:1px solid #b1acac;
+	padding:10px 15px;
 }

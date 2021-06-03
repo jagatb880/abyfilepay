@@ -1,1 +1,153 @@
+.home-solde{
+	text-align:right;
+	font-size:12px;
+}
+.home-image{
+	text-align:right;
+	padding:50px 11px 5px 11px;
+}
+.mcenter-solde{
+	text-align:center;
+}
+ion-content{
+	padding-bottom:15px;
+}
+ion-card
+{
+	background-color:#ffffff;
+}
+.menu ion-item
+{
+	background-color:#98c6de;
+}
+.footer{min-height:15px;}
+
+
+
+.col img {
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+.groupe
+  {
+  background-color:white;
+  }
+.icone-service
+{
+	
+}
+.grise{
+	filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+}
+.shop-item {
+  position: relative;
+}
+@media (min-width: 50px) and (max-width: 150px) {
+  .groupe
+  {
+	width:100%;
+	float:left;
+	height:100px;
+  }
+  .welcome-card
+	{
+		width:100%;
+		margin:4px;
+	}
+  .welcome-card img
+	{
+		width:100%;
+	}
+}
+@media (min-width: 151px) and (max-width: 188px) {
+  .groupe
+  {
+	width:50%;
+	float:left;
+	height:100px;
+  }
+  .welcome-card
+	{
+		width:100%;
+		margin:4px;
+	}
+  .welcome-card img
+	{
+		width:100%;
+	}
+}
+@media (min-width: 189px) and (max-width: 320px) {
+  .groupe
+  {
+	width:33%;
+	float:left;
+  }
+  .welcome-card
+	{
+		width:100%;
+		margin:0px;
+	}
+  .welcome-card img
+	{
+		width:100%;
+	}
+	
+}
+@media (min-width: 321px) and (max-width: 420px) {
+  .groupe
+  {
+	width:33%;
+	float:left;
+  }
+  .welcome-card
+	{
+		width:100%;
+		margin:8px;
+	}
+  .welcome-card img
+	{
+		width:100%;
+	}
+	
+}
+@media (min-width: 420px) and (max-width: 630px) {
+  .groupe
+  {
+	width:33%;
+	float:left;
+  }
+  .welcome-card
+	{
+		width:100%;
+		margin:4px;
+	}
+  .welcome-card img
+	{
+		width:100%;
+	}
+}
+
+@media screen and (min-width: 631px){
+  
+  .groupe
+  {
+	width:25%;
+	float:left;
+  }
+  .welcome-card
+	{
+		width:100%;
+		margin:4px;
+	}
+  .welcome-card img
+	{
+		width:100%;
+	}
+  
+}
+
 

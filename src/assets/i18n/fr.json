@@ -1,0 +1,148 @@
+
+{
+"abyfourecap":
+{
+"debut":"Vous allez commencer la transaction","loadretrait":"Demande de retrait","titre":"R\u00e9capitulatif conversion"
+}
+,"abyfou":
+{
+"lexp":"Exp\u00e9diteur","lmontant":"Montant","loadconv":"Lancement de la conversion","lrecpt":"Recepteur","texp":"Num\u00e9ro Expediteur","titre":"Flash Convertisseur","tmontant":"Entrer le montant","trecpt":"Num\u00e9ro R\u00e9cepteur"
+}
+,"global":
+{
+"africmomo":"Transfert Momo Africa","an18":"Vous devez avoir plus de 18 ans","beneficiaire":"B\u00e9n\u00e9ficiaire","btnactikve":"Activer","btnactive":"Bouton Activer","btncancel":"Annuler","btncontinue":"Continuer ","btncrediter":"Cr\u00e9diter","btndisconnect":"Se d\u00e9connecter","btnhome":"Retour \u00e0 l'accueil","btnmouvement":"Mouvements","btnpaye":"Payer","btnpending":"Actualiser","btnrefresh":"Actualiser","btnservice":"Retour au service","btntermine":"Terminer","btntransaction":"Transactions","btnupdate":"Modifier","btnverifie":"V\u00e9rifier","cactive":"Code d'activation","charge":"Chargement ...","de":"De","disconnect":"\u00cates vous s\u00fbre de vouloir vous d\u00e9connecter ?","echec":"Echec de connexion internet","labonne":"Num\u00e9ro abonn\u00e9","lclient":"Client","lcommission":"Commissions","lcompteur":"Num\u00e9ro de compteur","lcontrat":"Num\u00e9ro de contrat","lcreation":"Cr\u00e9ation de compte","ldate":"Date","ldconnexion":"Derni\u00e8re  Connexion","ldepot":"D\u00e9p\u00f4t","lexp":"Expediteur","lfrais":"Frais","lfrom":"Du","lidagent":"ID Agent","lidclient":"ID Client","lidservice":"ID Service","lmontant":"Montant","lnom":"Nom","lnumber":"Num\u00e9ro","loadrefresh":"Rafraichissement de la session","loadtransfert":"Transfert du cr\u00e9dit","loadvnumber":"V\u00e9rification du num\u00e9ro","lopera":"Operateur","lpays":"Pays","lpiece":"Pi\u00e8ce d'identit\u00e9","lquartier":"Quartier","lrecpt":"Destinataire ","lregion":"R\u00e9gion","lretrait":"Retrait","lrole":"R\u00f4le","lsearch":"Rechercher","lservice":"Service","lsolde":"Solde","lto":"Au","ltotal":"Total","lville":"Ville","msgalert":"Message d'alerte","msgconfirm":"Message de confirmation","msgremonte":"Vous allez remonte les commissions !","msgupdate":"Modifier","msgvmontant":"Le montant n'est valide","msgvnumber":"Le num\u00e9ro n'est pas valide","noconnect":"Echec de connexion Internet","oblige":"Les champs obligatoires ne sont pas remplis","ouvrir":"Ouvrir une session","recap":"R\u00e9capitulatif","service":"Service","spassword":"Les champs mot de passe doivent \u00eatre identiques","statut":"Statut","tcontrat":"Entrer le num\u00e9ro de contrat","tdatedebut":"Date d\u00e9but","tdatefin":"Date fin","tmontant":"Entrer le montant","tnumber":"Entrer le num\u00e9ro","trdetail":"D\u00e9tail de la transaction","trfin":"Fin de la transaction","vcontrat":"Contrat valide !","verif":"V\u00e9rification","vers":"Vers"
+}
+,"africrecap":
+{
+"titre":"Recapitulatif AfricMomo"
+}
+,"afric":
+{
+"titre":"Africa Mobile Money","vnumber":"Le num\u00e9ro n'est pas valide pour l'operateur"
+}
+,"agents":
+{
+"titre":"Liste des agents"
+}
+,"agent":
+{
+"cagent":"Votre Agent  \u00e9t\u00e9 ajout\u00e9 !","creation":"Creation de compte agent","titre":"Activer un agent"
+}
+,"cashrecap":
+{
+"termine":"Vous aller terminer cette op\u00e9ration !"
+}
+,"cash":
+{
+"titre":"Envoi\/Retrait"
+}
+,"commission":
+{
+"titre":"Mes commissions"
+}
+,"contact":
+{
+"call":"Ou appelez le (237) 676 888 888","titre":"Nous contacter","via":"Contactez nous via"
+}
+,"creditcompte":
+{
+"recharge":"Vous allez recharger le compte","success":"Recharge effectu\u00e9e avec success !","texte":"Vous allez recharger ","titre":"Recharger un agent"
+}
+,"creditrecap":
+{
+"titre":"Recapitulatif recharge"
+}
+,"credit":
+{
+"titre":"Recharge de compte"
+}
+,"factureforfait":
+{
+"oblige":"Le num\u00e9ro abonn\u00e9 est obligatoire !","titre":"Choisir votre forfait","vabon":"Le num\u00e9ro abonn\u00e9 est obligatoire !","vabonne":"Le num\u00e9ro abonn\u00e9 est obligatoire !"
+}
+,"factureliste":
+{
+"detail":"D\u00e9tail de la facture","find":"Recherche d'une facture","titre":"Liste des factures","vservice":"Vous devez s\u00e9lectionner au moins une facture !"
+}
+,"facturerecap":
+{
+"paye":"Vous aller payer cette facture"
+}
+,"facture":
+{
+"titre":"Recherche de facture"
+}
+,"home":
+{
+"about":"A propos de nous","admin":"Administration","comm":"Commission","connect":"Connect\u00e9","disconnect":"D\u00e9connexion","mcompte":"Mon compte","point":"Points","remonte":"Vous allez remonter les commissions !","solde":"Solde principal"
+}
+,"identifie":
+{
+"continue":"Continuer","cpassword":"Confirmer le mot de passe","daten":"Date de naissance","femi":"F\u00e9minin","lieu":"Lieu de naissance","masc":"Masculin","nom":"Nom","numero":"Num\u00e9ro","password":"Mot de passe","prenom":"Pr\u00e9nom","profession":"Profession","sexe":"Sexe","titre":"Informations personnelles"
+}
+,"localise":
+{
+"annule":"Annuler","cni":"Carte d'identit\u00e9","continue":"Continuer","datexp":"Date expiration","load":"Chargement","numero":"Numero de pi\u00e8ce","passport":"Passeport","quartier":"Quartier","region":"R\u00e9gion","titre":"Localisation et pi\u00e8ce","type":"Type de pi\u00e8ce","ville":"Ville"
+}
+,"login":
+{
+"besoin":"Besoin d'un compte","choix":"Choisir une langue","connect":"Connexion","forget":"Mot de passe oubli\u00e9e","french":"Fran\u00e7ais","newcompte":"Nouveau compte","number":"Num\u00e9ro","numbers":"Mes num\u00e9ros","password":"Mot de passe","souhait":"Souhaitez vous utiliser un nouveau compte"
+}
+,"mouvement":
+{
+"sapres":"Solde apr\u00e8s","savant":"Solde avant","tafficher":"Tout afficher","titre":"Suivi des mouvements"
+}
+,"password":
+{
+"apassword":"Ancien mot de passe","cpassword":"Confirmez le mot de passe","lapassword":"Entrer l'ancien mot de passe","lcpassword":"Confirmez le mot de passe","lnpassword":"Entrer le nouveau mot de passe","npassword":"Nouveau mot de passe","titre":"Modifier le mot de passe"
+}
+,"profil":
+{
+"appareil":"Appareil","fabricant":"Nom du fabricant","ident":"identification","imei":"Imei","localise":"Localisation","modele":"Mod\u00e8le","nom":"Nom appareil","userid":"ID Utilisateur","version":"Version"
+}
+,"recharge":
+{
+"titre":"Recharge de compte"
+}
+,"reloadclient":
+{
+"vnumber":"Le num\u00e9ro n'est pas valide pour l'operateur"
+}
+,"reloadrecap":
+{
+"titre":"R\u00e9capitulatif World Airtime"
+}
+,"reload":
+{
+"titre":"Transfert international","vnumber":"Le num\u00e9ro n'est pas valide pour l'operateur"
+}
+,"session":
+{
+"stitre":"Votre session a expir\u00e9e","texte":"Apr\u00e8s plusieurs minutes sans activit\u00e9, la session a expir\u00e9e.","titre":"Session expir\u00e9e"
+}
+,"suscribe":
+{
+"agent":"Compte AGENT","partner":"Devenez partenaire","perso":"Compte personnel","titre":"Cr\u00e9er votre compte","type":"Type de compte","welcome":"Bienvenue sur Flash Pay"
+}
+,"transactiondetail":
+{
+"titre":"D\u00e9tail de la transaction"
+}
+,"transaction":
+{
+"titre":"Transactions"
+}
+,"transfertrecap":
+{
+"titre":"Transfert r\u00e9capitulatif"
+}
+,"transfert":
+{
+"titre":"Airtime"
+}
+,"verifie":
+{
+"appareil":"Type de T\u00e9l\u00e9phone","code":"Code inscription","ident":"Identifiant","nom":"Votre nom","phone":"T\u00e9l\u00e9phone","role":"R\u00f4le","stitre":"Votre inscription est termin\u00e9e","termine":"Terminer","titre":"Terminer votre inscription","tvalide":"Conserver ce code pour valider votre inscription"
+}
+
+}

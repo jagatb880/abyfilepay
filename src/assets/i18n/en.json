@@ -1,0 +1,148 @@
+
+{
+"abyfourecap":
+{
+"debut":"You will start the transaction","loadretrait":"Request for withdrawal","titre":"Conversion summary"
+}
+,"abyfou":
+{
+"lexp":"Sender","lmontant":"Amount","loadconv":"Start of conversion","lrecpt":"Receiver","texp":"Sender number","titre":"Flash Converter","tmontant":"Enter amount","trecpt":"Receiver number"
+}
+,"global":
+{
+"africmomo":"Momo Africa transfer","an18":"Do you more than 18 years","beneficiaire":"Beneficiary","btnactikve":"Activate","btnactive":"Activate","btncancel":"Cancel","btncontinue":"Continue","btncrediter":"Credit","btndisconnect":"Disconnect","btnhome":"Back to Home","btnmouvement":"Movements","btnpaye":"pay","btnpending":"Refresh","btnrefresh":"Refresh","btnservice":"Back to service","btntermine":"Finish","btntransaction":"Transactions","btnupdate":"Update","btnverifie":"Verify","cactive":"Activation code","charge":"Loading ...","de":"from","disconnect":"Are you sure you want to log out?","echec":"Internet connection failure","labonne":"Subscriber number","lclient":"Client","lcommission":"Commission","lcompteur":"Counter number","lcontrat":"Contract number","lcreation":"Account creation","ldate":"Date","ldconnexion":"Last connection","ldepot":"Deposit","lexp":"Forwarding agent","lfrais":"Charges","lfrom":"from","lidagent":"Agent ID","lidclient":"Client ID","lidservice":"Service ID","lmontant":"Amount","lnom":"Name","lnumber":"Number","loadrefresh":"Refreshing the session","loadtransfert":"Credit transfer","loadvnumber":"Number verification","lopera":"Operator","lpays":"Country","lpiece":"ID","lquartier":"Quater","lrecpt":"Recipient","lregion":"Region","lretrait":"Withdrawal","lrole":"Role","lsearch":"Search","lservice":"Service","lsolde":"Solde","lto":"to","ltotal":"Total","lville":"Town","msgalert":"Alert message","msgconfirm":"Confirmation message","msgremonte":"fa","msgupdate":"Update","msgvmontant":"The amount is not valid","msgvnumber":"The number is not valid","noconnect":"Internet connection failure","oblige":"You must give need fields","ouvrir":"Open a session","recap":"Summary","service":"Service","spassword":"Password filed's need to be same","statut":"Status","tcontrat":"Enter contract number","tdatedebut":"Start date","tdatefin":"Date fin","tmontant":"Enter an amount","tnumber":"Enter number","trdetail":"Details of the transaction","trfin":"End of transaction","vcontrat":"Valid contract!","verif":"Verification","vers":"to"
+}
+,"africrecap":
+{
+"titre":"AfricMomo summary"
+}
+,"afric":
+{
+"titre":"Africa Mobile Money","vnumber":"The number is not valid for the operator"
+}
+,"agents":
+{
+"titre":"List of agents"
+}
+,"agent":
+{
+"cagent":"Your Agent has been added!","creation":"Agent account creation","titre":"Activate an agent"
+}
+,"cashrecap":
+{
+"termine":"You will finish this operation!"
+}
+,"cash":
+{
+"titre":"Shipping \/ Withdrawal"
+}
+,"commission":
+{
+"titre":"My commissions"
+}
+,"contact":
+{
+"call":"Or dial (237) 676 888 888","titre":"Contact us","via":"Contact us with"
+}
+,"creditcompte":
+{
+"recharge":"You will reload the account","success":"Recharge done successfully!","texte":"You will recharge","titre":"Reload an agent"
+}
+,"creditrecap":
+{
+"titre":"Recharge summary"
+}
+,"credit":
+{
+"titre":"Account recharge"
+}
+,"factureforfait":
+{
+"oblige":"The subscriber number is mandatory!","titre":"Choose your package","vabon":"The subscriber number is mandatory!","vabonne":"The subscriber number is mandatory!"
+}
+,"factureliste":
+{
+"detail":"Details of the invoice","find":"Recharge an invoice","titre":"List of invoices","vservice":"You must select at least one service!"
+}
+,"facturerecap":
+{
+"paye":"You will pay this bill"
+}
+,"facture":
+{
+"titre":"Invoice search"
+}
+,"home":
+{
+"about":"About us","admin":"Administration","comm":"Commission","connect":"Connected","disconnect":"Logout","mcompte":"My account","point":"Points","remonte":"You will raise the commissions !","solde":"Main balance"
+}
+,"identifie":
+{
+"continue":"Continue","cpassword":"Confirm password","daten":"Date of Birth","femi":"Female","lieu":"Place of birth","masc":"Male","nom":"Last name","numero":"Number","password":"Password","prenom":"First name","profession":"Profession","sexe":"Sex","titre":"Personal informations"
+}
+,"localise":
+{
+"annule":"Cancel","cni":"Identiity Card","continue":"Continue","datexp":"Expiration","load":"Loading","numero":"Number on document","passport":"Passeport","quartier":"Quater","region":"Region","titre":"Localisation and Papers","type":"Room type","ville":"Town"
+}
+,"login":
+{
+"besoin":"Need an account","choix":"Choose a language","connect":"Sign in","forget":"Forgot your password","french":"French","newcompte":"New account","number":"Number","numbers":"My numbers","password":"Password","souhait":"Would you like to use a new account"
+}
+,"mouvement":
+{
+"sapres":"Balance after","savant":"Balance before","tafficher":"Show all","titre":"Movement tracking"
+}
+,"password":
+{
+"apassword":"Old password","cpassword":"Confirm the password","lapassword":"Enter old password","lcpassword":"Confirm the password","lnpassword":"Enter new password","npassword":"New Password","titre":"Change the password"
+}
+,"profil":
+{
+"appareil":"Device","fabricant":"Manufacturer Name","ident":"Identification","imei":"Imei","localise":"Location","modele":"Model","nom":"Device name","userid":"User ID","version":"Version"
+}
+,"recharge":
+{
+"titre":"Account recharge"
+}
+,"reloadclient":
+{
+"vnumber":"The number is not valid for the operator"
+}
+,"reloadrecap":
+{
+"titre":"World Airtime Summary"
+}
+,"reload":
+{
+"titre":"International transfer","vnumber":"The number is not valid for the operator"
+}
+,"session":
+{
+"stitre":"Your session has expired","texte":"After several minutes without activity, the session has expired.","titre":"Session timed out"
+}
+,"suscribe":
+{
+"agent":"AGENT account","partner":"Become a partner","perso":"Personal account","titre":"Create your account","type":"Type of account","welcome":"Welcome to Flash Pay"
+}
+,"transactiondetail":
+{
+"titre":"Details of the transaction"
+}
+,"transaction":
+{
+"titre":"Transactions"
+}
+,"transfertrecap":
+{
+"titre":"Summary transfer"
+}
+,"transfert":
+{
+"titre":"Airtime"
+}
+,"verifie":
+{
+"appareil":"Phone type","code":"Registration code","ident":"Username","nom":"Your name","phone":"Phone","role":"Role","stitre":"Your registration is completed","termine":"Finish","titre":"Complete your registration","tvalide":"Keep this code to validate your registration"
+}
+
+}

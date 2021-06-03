@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="danger">
+  	
+    <ion-title>{{Globale?.Translate.titre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <div   text-center>
+        <img src="/assets/logo/home-logo.png" alt="" class="image-logo"/>
+    </div>
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    
+      <ion-list lines="full" class="ion-no-margin ion-no-padding">
+	<ion-item (click)="presentPopover(Pays)">
+		<img src="{{pays?.logo}}" alt="" class="image-icone" hspace="4" vspace="4"/>
+		 {{pays?.nom}} 
+		 <ion-buttons slot="end">
+			  <ion-icon name="arrow-dropdown"></ion-icon>
+			</ion-buttons>
+	</ion-item>
+        <ion-item>
+          <ion-input type="text" 
+                     ngModel 
+                     name="region" 
+                     id="region"  
+					  value="{{formdata?.region}}"
+                      placeholder="{{Globale?.Translate.region}} "
+                     ></ion-input>
+        </ion-item>
+		<ion-item>
+          <ion-input type="text"   
+                     ngModel 
+                     name="ville" 
+                      placeholder="{{Globale?.Translate.ville}} "
+					   value="{{formdata?.ville}}"
+                     id="ville"></ion-input>
+        </ion-item>
+    <ion-item>
+          <ion-input type="text"   
+                     ngModel 
+                     name="quartier"
+                     placeholder="{{Globale?.Translate.quartier}} " 
+					  value="{{formdata?.quartier}}"
+                     id="quartier"></ion-input>
+    </ion-item>
+		<ion-item>
+		<ion-label>{{Globale?.Translate.type}} </ion-label>
+          <ion-select name="typepiece" ngModel value="{{formdata?.typepiece}}" okText="{{Globale?.Translate.btncontinue}}" cancelText="{{Globale?.Translate.btncancel}}" >
+            <ion-select-option value="Passeport"> {{Globale?.Translate.passport}}</ion-select-option>
+            <ion-select-option value="CNI"> {{Globale?.Translate.cni}} </ion-select-option>
+          </ion-select>
+        </ion-item>
+		<ion-item>
+          <ion-input type="text"   
+                     ngModel 
+                     name="piece" 
+                     placeholder="{{Globale?.Translate.numero}} " 
+					  value="{{formdata?.piece}}"
+                     id="piece" ></ion-input>
+        </ion-item>
+   
+    <ion-item>
+		<ion-label>{{Globale?.Translate.datexp}}</ion-label>
+		<ion-datetime  ngModel id="datepiece"  name="datepiece" displayFormat="DD/MM/YYYY" max="2055" value="{{formdata?.datepiece}}" ></ion-datetime>
+    </ion-item> 
+	<ion-item text-right>
+		  <ion-button color="primary"  color="light" type="button" (click)="Globale.navigate('/suscribe')">{{Globale?.Translate.annule}}</ion-button>
+          <ion-button color="primary"  class="submit-btn" type="submit">{{Globale?.Translate.continue}}</ion-button>
+	</ion-item>
+      </ion-list>
+      
+  </form>
+
+
+</ion-content>
+

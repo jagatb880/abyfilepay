@@ -1,14 +1,138 @@
+ <ion-split-pane>
+    <ion-menu type="overlay">
+      <ion-header>
+        <ion-toolbar>
+          <ion-item color="light">
+            <ion-thumbnail slot="start">
+              <img src="/assets/logo/logo.png" alt="" />
+            </ion-thumbnail>
+            <ion-label *ngIf="infoCompte">
+              <p>{{Session?.idsession}} [{{Session?.role}}]</p>
+              <h2 color="primary">{{Globale?.Translate.connect}}</h2>
+            </ion-label>
+          </ion-item>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item *ngIf="Session?.Menu.Perso">
+          <ion-label color="dark">
+            <b>{{Globale?.Translate.mcompte}}</b>
+          </ion-label>
+        </ion-item>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of Session?.Menu.Perso">
+            <ion-item [routerDirection]="'root'" (click)="moveToPage(p.url)">
+              <ion-icon slot="start" [name]="p.icon" color="dark"></ion-icon>
+              <ion-label color="dark">
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        <ion-item *ngIf="Session?.Menu.Admin">
+          <ion-label color="dark">
+            <b>{{Globale?.Translate.admin}}</b>
+          </ion-label>
+        </ion-item>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of Session?.Menu.Admin">
+            <ion-item [routerDirection]="'root'" (click)="moveToPage(p.url)">
+              <ion-icon slot="start" [name]="p.icon" color="dark"></ion-icon>
+              <ion-label color="dark">
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        <ion-item  *ngIf="Session?.Menu.Contact">
+          <ion-label color="dark">
+            <b>{{Globale?.Translate.about}}</b>
+          </ion-label>
+        </ion-item>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of Session?.Menu.Contact">
+            <ion-item [routerDirection]="'root'" (click)="moveToPage(p.url)">
+              <ion-icon slot="start" [name]="p.icon" color="dark"></ion-icon>
+              <ion-label color="dark">
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        <ion-item routerDirection="'root'"(click)="doLogOut()">
+              <ion-icon slot="start" name="log-out" color="dark"></ion-icon>
+              <ion-label color="dark">
+                {{Globale?.Translate.btndisconnect}}
+              </ion-label>
+        </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+     <ion-router-outlet main>
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+  <ion-toolbar color="danger" *ngIf="!inTop">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+	 <ion-title size="large">Flash Pay</ion-title>
+    <ion-button  slot="end" color="danger" >
+      <ion-icon name="refresh"></ion-icon>
+    </ion-button>
+  </ion-toolbar>  
 </ion-header>
+<ion-content [scrollEvents]="true" (ionScroll)="onScroll($event)">
+<ion-toolbar color="danger" *ngIf="inTop">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title size="large">Flash Pay</ion-title>
+     <ion-buttons slot="secondary">
+    <ion-button (click)="moveToPage('/home')">
+      <ion-icon slot="icon-only" name="refresh"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+<ion-toolbar color="danger" *ngIf="inTop">
+    <ion-grid>
+      <ion-row>
+        <ion-col text-center>
+        <ion-text>{{Globale?.Translate.solde}} </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col text-center>
+        <ion-text class="big-text"> {{Session?.solde}} </ion-text><ion-icon name="chevron-up-outline"></ion-icon><ion-icon name="caret-up-circle-outline"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col text-center>
+        <ion-text  *ngIf="Session?.role=='User'">{{Globale?.Translate.point}}:</ion-text><ion-text  *ngIf="Session?.role!='User'">{{Globale?.Translate.comm}}:</ion-text><ion-text> {{Session?.comm}}</ion-text>&nbsp;<ion-icon name="arrow-dropup" (click)="useCommission()" color="light"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="moveToPage('/credit')" color="warning">
+      <ion-icon name="cart"></ion-icon>
+    </ion-fab-button>
+ </ion-fab>
+<ion-item *ngFor="let s of Globale?.Session.Services" class="groupe"  lines="none" no-padding>
+  <div class="welcome-card" (click)="moveToPage('/'+s.module,s.code)" *ngIf="s?.actif">
+        <ion-grid>
+		<ion-row>
+		<ion-col text-center class="col">
+        <img  src="{{s.logo}}" class="home-img"/>
+		</ion-col>
+		</ion-row>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+		</ion-grid>
+      </div>
+	  <div class="welcome-card  grise" *ngIf="!s?.actif">
+        <ion-grid>
+		<ion-row>
+		<ion-col text-center class="col">
+        <img  src="{{s.logo}}" class="home-img"/>
+		</ion-col> 
+		</ion-row>
+
+		</ion-grid>
+      </div>
+  </ion-item>
 </ion-content>
+</ion-router-outlet>
+</ion-split-pane>

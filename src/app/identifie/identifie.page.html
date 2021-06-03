@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar color="danger">
+  	<ion-buttons slot="start">
+	<ion-button (click)="Globale.navigate('/suscribe')">
+	   <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+	 </ion-button>   
+    </ion-buttons>
+    <ion-title>{{Globale.Translate?.titre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <div   text-center>
+        <img src="/assets/logo/home-logo.png" alt=""  class="image-logo"/>
+    </div>
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    
+      <ion-list lines="full" class="ion-no-margin ion-no-padding">
+        <ion-item>
+          <ion-input type="number" 
+                     ngModel 
+                     name="number" 
+                     id="number"  
+                      placeholder="{{Globale.Translate?.numero}}"
+					  value="{{formdata?.number}}"
+                     ></ion-input>*
+        </ion-item>
+        <ion-item lines="none" no-padding>
+        <input ngModel name="password"  placeholder="{{Globale.Translate?.password}}" [type]="showPassword ? 'text' : 'password'" clearOnEdit="false" value="{{formdata?.password}}">
+		<button ion-button clear class="eye-icon-btn" type="button" item-right (click)="onPasswordToggle()"><ion-icon [name]="showPassword ? 'eye-off' : 'eye'"></ion-icon></button>
+      </ion-item>
+      <ion-item lines="none" no-padding>
+        <input ngModel name="cpassword" placeholder="{{Globale.Translate?.cpassword}}" [type]="cshowPassword ? 'text' : 'password'" clearOnEdit="false" value="{{formdata?.cpassword}}">
+        
+		<button ion-button clear class="eye-icon-btn" type="button" item-right (click)="oncPasswordToggle()"><ion-icon [name]="cshowPassword ? 'eye-off' : 'eye'"></ion-icon></button>
+      </ion-item>
+		<ion-item>
+          <ion-input type="text"   
+                     ngModel 
+                     name="nom" 
+                      placeholder="{{Globale.Translate?.nom}}"
+					  value="{{formdata?.nom}}"
+                     id="nom"></ion-input>*
+        </ion-item>
+		<ion-item>
+          <ion-input type="text"   
+                     ngModel 
+                     name="prenom" 
+                      placeholder="{{Globale.Translate?.prenom}}"
+					  value="{{formdata?.prenom}}"
+                     id="nom"></ion-input>
+        </ion-item>
+    <ion-item>
+	<ion-label>{{Globale.Translate?.daten}}</ion-label>
+	<ion-datetime  ngModel id="datenais"  name="datenais" displayFormat="DD/MM/YYYY" value="{{formdata?.datenais}}" placeholder="{{Globale.Translate?.daten}}"></ion-datetime>
+    </ion-item>
+		<ion-item>
+          <ion-input type="text"   
+                     ngModel 
+                     name="lieunais" 
+                     placeholder="{{Globale.Translate?.lieu}}" 
+					 value="{{formdata?.lieunais}}"
+                     id="lieunais" ></ion-input>
+        </ion-item>
+    <ion-item>
+          <ion-label> {{Globale.Translate?.sexe}} </ion-label>
+          <ion-select name="sexe"placeholder="{{Globale.Translate?.sexe}}" okText="{{Globale?.Translate.btncontinue}}" cancelText="{{Globale?.Translate.btncancel}}" >
+            <ion-select-option value="M"> {{Globale.Translate?.masc}}</ion-select-option>
+            <ion-select-option value="F"> {{Globale.Translate?.femi}} </ion-select-option>
+          </ion-select>
+        </ion-item>
+    <ion-item>
+          <ion-input type="text"   
+                     ngModel 
+                     name="profession" 
+                     placeholder="{{Globale.Translate?.profession}}" 
+					 value="{{formdata?.profession}}"
+                     id="profession" ></ion-input>
+        </ion-item>
+		
+        <p></p>
+          <ion-button color="primary" expand="full" class="submit-btn" type="submit">{{Globale.Translate?.continue}}</ion-button>
+
+        
+      </ion-list>
+    
+    
+      
+  </form>
+
+
+</ion-content>
+

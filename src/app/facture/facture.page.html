@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+	<ion-button (click)="Globale.navigate('/home')">
+	   <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+	 </ion-button>   
+    </ion-buttons>
+    <ion-title>{{Globale?.Translate.titre}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+<ion-grid>
+  <ion-row>
+
+    <ion-col text-center>
+      <img src="{{image}}" alt=""  class="image-logo" />
+    </ion-col>
+
+  </ion-row>  
+</ion-grid>
+
+<ion-list>
+	<ion-item no-padding >
+		<ion-label position="floating" color="primary">
+		  {{Label}} 
+		</ion-label>
+		<ion-input type="text" ngModel name="contrat" value="test" placeholder="{{Label}}"></ion-input>
+		<ion-input type="hidden" ngModel name="number" value="" *ngIf="isEneo" placeholder="{{Label}}"></ion-input>
+	</ion-item>
+	<p ion-text text-right *ngIf="valide?.contrat">
+		<ion-text color="danger">
+		  {{valide?.contrat}}
+		</ion-text>
+	</p>
+	<ion-item no-padding *ngIf="!isEneo">
+		<ion-label position="floating" color="primary">
+		 {{Globale?.Translate.lnumber}} 
+		</ion-label>
+		<ion-input type="text" ngModel name="number" placeholder="{{Label}}"></ion-input>
+	</ion-item>
+	<p ion-text text-right *ngIf="valide?.number">
+		<ion-text color="danger">
+		 {{valide?.number}}
+		</ion-text>
+	</p>  
+</ion-list>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col text-right>
+        <ion-button color="light" (click)="Globale.navigate('/home')">{{Globale?.Translate.btncancel}} </ion-button>
+        
+        <ion-button color="primary"  type="submit">{{Globale?.Translate.btncontinue}} </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    
+  </form>
+</ion-content>

@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="danger">
+  	<ion-buttons slot="start">
+	<ion-button (click)="Globale.navigate('/home')">
+	   <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+	 </ion-button>   
+    </ion-buttons>
+    <ion-title>{{Globale.Translate?.titre}}</ion-title>
+    <ion-buttons slot="secondary">
+    <ion-button (click)="moveToPage('agent')">
+      <ion-icon slot="icon-only" name="add-circle" ></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form #searchForm="ngForm" (ngSubmit)="actualise(searchForm)">
+		
+</form>		
+	<ion-item *ngFor="let p of Factures" lines="none">
+		<ion-grid>
+		<ion-row color="danger">
+				<ion-col no-padding>
+					<ion-button fill="outline" expand="full" color="{{p.Color}}">{{p.Nom}} [{{p.AgentID}}]</ion-button >
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col class="titrec" col-9>
+					{{Globale.Translate?.lidagent}} : {{p.AgentID}}<br>
+					{{Globale.Translate?.lpiece}} : {{p.Cni}}<br>
+					{{Globale.Translate?.lquartier}} : {{p.Quartier}}<br>
+					{{Globale.Translate?.lnumber}} : {{p.Phone}}<br>
+					{{Globale.Translate?.ldconnexion}} : {{p.DerniereCon}}<br>
+				</ion-col>
+				<ion-col text-right class="statut vcenter"  col-3 align-items-center>
+					
+					{{Globale.Translate?.lsolde}} : {{p.Balance}}<br>
+					{{Globale.Translate?.lcommission}} : {{p.Commissions}}<br>
+					<ion-button color="primary" (click)="goToRecharge('/credit-agent',p.AgentID,p.Nom)"  >{{Globale.Translate?.btncrediter}}</ion-button>
+					<ion-button color="secondary" (click)="goToPage('/transaction',p.AgentID)" >{{Globale.Translate?.btntransaction}}</ion-button>
+					<ion-button color="secondary" (click)="goToPage('/mouvement',p.AgentID)" >{{Globale.Translate?.btnmouvement}}</ion-button>
+				</ion-col>
+			</ion-row>
+			
+		</ion-grid>
+		
+	</ion-item>
+
+	<ion-grid>
+			<ion-row>
+				<ion-col text-center>
+					<ion-button color="primary" (click)="moveTo('deb')" *ngIf="page>1"><<</ion-button><ion-button color="primary" (click)="moveTo('prev')" *ngIf="page>1"><</ion-button><ion-button color="primary" (click)="moveTo('next')" *ngIf="page<last">></ion-button><ion-button color="primary" (click)="moveTo('last')" *ngIf="page!=last">>></ion-button>
+				</ion-col>
+			</ion-row>
+	</ion-grid>
+	
+
+
+</ion-content>
+

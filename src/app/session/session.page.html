@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="danger">
+  	<ion-buttons slot="start">
+	<ion-button (click)="Globale.navigate('/home')">
+	   <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+	 </ion-button>   
+    </ion-buttons>
+    <ion-title>{{Globale?.Translate.titre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<h4>{{Globale?.Translate.stitre}}</h4>
+<ion-text color="secondary">{{Globale?.Translate.texte}}</ion-text>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+   <ion-grid>
+		<ion-row>
+          <ion-col text-center>
+            <ion-item>
+            <ion-label>
+              <ion-icon name="key"></ion-icon>
+            </ion-label>
+               <ion-input type="{{passtype}}" ngModel name="password" id="password" placeholder="{{Globale?.Translate.lpassword}}"></ion-input>
+            <ion-icon name="{{passeye}}" (click)="managePassword()"></ion-icon>
+          </ion-item>
+          </ion-col>
+        </ion-row>
+    <ion-row>
+          <ion-col text-right>
+			<ion-button color="light"  (click)="doLogOut()">{{Globale?.Translate.btndisconnect}}</ion-button>
+			<ion-button color="primary"  type="submit">{{Globale?.Translate.btnrefresh}}</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>  
+</form>
+
+</ion-content>
+

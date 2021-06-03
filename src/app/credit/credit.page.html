@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+	<ion-button (click)="Globale.navigate('/home')">
+	   <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+	 </ion-button>   
+    </ion-buttons>
+    <ion-title>{{Globale?.Translate.titre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-searchbar type="text" debounce="500" (ionInput)="getItems($event)" placeholder="{{Globale?.Translate.lsearch}}"></ion-searchbar>
+  <ion-list *ngIf="isItemAvailable">
+    <ion-item *ngFor="let item of items" (click)="moveToPage('/recharge',item.idservice)">
+		<img src="{{item.Logo}}" alt="" class="image-icone" hspace="4" vspace="4" />
+		{{item.Nom}} 
+	</ion-item>
+  </ion-list>
+</ion-content>
+

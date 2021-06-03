@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>{{Globale.Translate?.titre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+<ion-grid>
+  <ion-row>
+
+    <ion-col text-center>
+      <img src="{{image}}" alt="" class="image-logo" />
+    </ion-col>
+
+  </ion-row>  
+
+</ion-grid>
+<ion-grid>
+  <ion-row>
+
+    <ion-col text-center>
+      <ion-icon name="checkmark-circle" color="primary" class=""></ion-icon>
+    </ion-col>
+
+  </ion-row>  
+</ion-grid>
+<ion-grid>
+  <ion-row class="ligne">
+    <ion-col text-right><b>{{Globale.Translate?.lservice}}</b></ion-col>
+	<ion-col>{{data?.Trx_type}}</ion-col>
+  </ion-row>
+  <ion-row class="ligne">
+    <ion-col text-right><b>{{Globale.Translate?.lidservice}}</b></ion-col>
+	<ion-col>{{data?.TransactionID}}</ion-col>
+  </ion-row> 
+  <ion-row class="ligne">
+    <ion-col text-right><b>{{Globale.Translate?.statut}}</b></ion-col>
+	<ion-col><ion-text color="{{data?.Color}}">{{data?.Statut}} </ion-text></ion-col>
+  </ion-row>
+   <ion-row class="ligne" *ngIf="data?.Infos.sender">
+    <ion-col text-right><b>{{Globale.Translate?.lexp}}</b></ion-col>
+	<ion-col>{{data?.Infos.sender}}</ion-col>
+  </ion-row> 
+  <ion-row class="ligne">
+    <ion-col text-right><b>{{Globale.Translate?.lrecpt}}</b></ion-col>
+	<ion-col>{{data?.Beneficiare}}</ion-col>
+  </ion-row> 
+  <ion-row class="ligne">
+    <ion-col text-right><b>{{Globale.Translate?.lmontant}}</b></ion-col>
+	<ion-col>{{data?.montant}}</ion-col>
+  </ion-row> 
+  <ion-row class="ligne">
+    <ion-col text-right><b>{{Globale.Translate?.lfrais}}</b></ion-col>
+	<ion-col>{{data?.frais}} </ion-col>
+  </ion-row>
+  <ion-row class="ligne">
+    <ion-col text-right><b>{{Globale.Translate?.ltotal}}</b></ion-col>
+	<ion-col>{{data?.total}} </ion-col>
+  </ion-row>
+</ion-grid>
+    <ion-grid>
+	  <ion-row>
+        <ion-col text-right>	
+			<ion-button color="warning" expand="full"  (click)="actualiser()" *ngIf="Statut">{{Globale.Translate?.btnpending}}</ion-button>		
+		</ion-col>
+      </ion-row>
+	  <ion-row>
+        <ion-col text-right>		
+			<ion-button color="primary" expand="full"  (click)="Globale.navigate('/'+data?.Module,Objet)">{{Globale.Translate?.btnservice}}</ion-button>
+		</ion-col>
+      </ion-row>
+	  <ion-row>
+        <ion-col text-right>	
+			<ion-button color="primary" expand="full"  (click)="moveToPage('/home')">{{Globale.Translate?.btnhome}}</ion-button>
+		</ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
