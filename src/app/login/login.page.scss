@@ -2,17 +2,46 @@
 	text-align:right;
 	padding:20px 11px 5px 11px;
 }
-.eye-icon-btn{
-    background-color: transparent !important;
-    color: black;
-    font-size: 2.2rem !important;
-    }
 input[type=number],input[type=text],input[type=password]
 {
 	padding:10px 15px;
+	width: 100%;
 }
 select,ion-select
 {
 	padding:5px 11px;
 	width:100%;
+}
+.show {
+	z-index: 9999;
+	position: absolute;
+	color: #c0c0c0;
+	right: 5px;
+	font-size: 17px;
+	font-weight: 500;
+	zoom: 1.8;
+  }
+
+  ion-icon{
+	  zoom: 1.2;
+  }
+
+  .login-row{
+    height: 100%;
+}
+
+.lock-bg {
+    width: 2px;
+    height: 100%;
+    margin-left: 50%;
+}
+.lock-img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+	padding: 2px;
+	height: 40px;
 }

@@ -1,19 +1,40 @@
-.home-image{
-	text-align:right;
-	padding:20px 51px ;
+.home-image {
+	text-align: right;
+	padding: 20px 51px;
 }
-.form-control
-{
-	width:100%;
-	padding: 9px 12px;
-	border:0px;
-}
-.eye-icon-btn{
-    background-color: transparent !important;
-    color: black;
-    font-size: 2.2rem !important;
-    }
-input[type=number],input[type=text],input[type=password]
-{
 
+.form-control {
+	width: 100%;
+	padding: 9px 12px;
+	border: 0px;
 }
+
+.eye-icon-btn {
+	background-color: transparent !important;
+	color: black;
+	font-size: 2.2rem !important;
+}
+
+.show {
+	z-index: 9999;
+	position: absolute;
+	color: #c0c0c0;
+	right: 5px;
+	font-size: 17px;
+	font-weight: 500;
+	zoom: 1.2;
+}
+
+ion-select {
+    width: 100% !important;
+	max-width: 100% !important;
+	height: 35px;
+	--padding-start: 0px;
+    --padding-top: 8px;
+	--padding-end: 5px;
+}
+
+ion-datetime{
+	height: 35px;
+}
+

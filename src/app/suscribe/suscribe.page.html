@@ -1,53 +1,55 @@
 <ion-header>
   <ion-toolbar color="danger">
-  	<ion-buttons slot="start">
-	<ion-button (click)="Globale.navigate('/login')">
-	   <ion-icon slot="start" name="arrow-round-back"></ion-icon>
-	 </ion-button>   
+    <ion-buttons slot="start">
+      <ion-button (click)="Globale.navigate('/login')">
+        <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+      </ion-button>
     </ion-buttons>
     <ion-title>{{Translate?.titre}}</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content padding>
-    <div  text-center>
-        <img src="/assets/logo/home-logo.png" alt="" class="image-logo"/>
-    </div>
- 		<ion-col lines="none" text-center>
-            <h1 class="header1">{{Translate?.welcome}}</h1>
-        </ion-col>
-        <ion-col lines="none" text-center>
-            <h2 class="header2">{{Translate?.type}}</h2>
-        </ion-col>
-  <ion-grid>
+  <div text-center>
+    <img src="/assets/logo/home-logo.png" alt="" class="image-logo" />
+  </div>
+  <ion-col lines="none" text-center>
+    <h1 class="header1">{{Translate?.welcome}}</h1>
+  </ion-col>
+  <ion-col lines="none" text-center>
+    <h2 class="header2">{{Translate?.type}}</h2>
+  </ion-col>
+  <div style="margin-right: 40px;margin-left: 40px;">
     <ion-row>
-          <ion-col text-center>
-            <ion-button color="primary" expand="full" class="submit-btn" type="button"  (click)="Globale.navigate('identifie')">{{Translate?.perso}}
-            </ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>     
-          
-     
-        <ion-grid>
+      <ion-col text-center>
+        <ion-button color="primary" expand="full" class="submit-btn" type="button"
+          (click)="Globale.navigate('identifie')" style="text-transform: none;">{{Translate?.perso}}
+        </ion-button>
+      </ion-col>
+    </ion-row>
     <ion-row>
-          <ion-col text-center>
-            <ion-button color="primary" expand="full" class="submit-btn" type="button"  (click)="moveToPage('/contact','agent')">{{Translate?.agent}}
-            </ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+      <ion-col text-center>
+        <ion-button color="primary" expand="full" class="submit-btn" type="button"
+          (click)="moveToPage('/contact','agent')" style="text-transform: none;">{{Translate?.agent}}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button color="primary" expand="full" class="submit-btn" type="button"
+          (click)="moveToPage('/contact','agent')" style="text-transform: none;">{{Translate?.marchant}}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button color="primary" expand="full" class="submit-btn" type="button"
+          (click)="moveToPage('/contact','partner')" style="text-transform: none;">{{Translate?.partner}}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
 
-      <ion-grid>
-    <ion-row>
-          <ion-col text-center>
-            <ion-button color="primary" expand="full" class="submit-btn" type="button"  (click)="moveToPage('/contact','partner')">{{Translate?.partner}}
-            </ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>     
-          
 
 
 
 </ion-content>
-

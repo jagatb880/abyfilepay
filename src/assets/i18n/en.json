@@ -78,7 +78,7 @@
 }
 ,"identifie":
 {
-"continue":"Continue","cpassword":"Confirm password","daten":"Date of Birth","femi":"Female","lieu":"Place of birth","masc":"Male","nom":"Last name","numero":"Number","password":"Password","prenom":"First name","profession":"Profession","sexe":"Sex","titre":"Personal informations"
+"continue":"Continue","cpassword":"Confirm password","daten":"Birth Date","femi":"Female","lieu":"Birth Place","masc":"Male","nom":"Last name","numero":"Number","password":"Password","prenom":"Name","profession":"Profession","sexe":"Gender","titre":"Personal informations"
 }
 ,"localise":
 {
@@ -86,7 +86,7 @@
 }
 ,"login":
 {
-"besoin":"Need an account","choix":"Choose a language","connect":"Sign in","forget":"Forgot your password","french":"French","newcompte":"New account","number":"Number","numbers":"My numbers","password":"Password","souhait":"Would you like to use a new account"
+"besoin":"Create an account","choix":"Choose a language","connect":"Connect","forget":"Forgot password","french":"French","newcompte":"New account","number":"Phone number/ID","numbers":"My numbers","password":"Password","souhait":"Would you like to use a new account"
 }
 ,"mouvement":
 {
@@ -122,7 +122,7 @@
 }
 ,"suscribe":
 {
-"agent":"AGENT account","partner":"Become a partner","perso":"Personal account","titre":"Create your account","type":"Type of account","welcome":"Welcome to Flash Pay"
+"agent":"Agent account","partner":"Partner (Super Agent)","marchant":"Marchant Account","perso":"Personal account","titre":"Create your account","type":"Account Type","welcome":"Welcome to ABYFOUPAY"
 }
 ,"transactiondetail":
 {

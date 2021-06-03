@@ -285,4 +285,8 @@ export class LoginPage implements OnInit {
 	});
 	return await popover.present();
 }
+
+fingerprintLogin(){
+	
+}
 }
