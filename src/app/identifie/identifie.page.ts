@@ -69,7 +69,7 @@ export class IdentifiePage implements OnInit {
 			return 1;
 		}
 
-		if(loginForm.controls['password'].value=='' || loginForm.controls['number'].value==''  || loginForm.controls['nom'].value=='')
+		if(loginForm.controls['password'].value=='' || loginForm.controls['number'].value==''  || loginForm.controls['prenom'].value=='')
 		{
 			alert(this.Globale.Translate.oblige);
 			return 1;

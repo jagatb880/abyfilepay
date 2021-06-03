@@ -19,7 +19,7 @@
         <ion-item lines="none">
           <div style="width: 100%;border: 1px solid black;padding-left: 5px;margin-right: 7px;">
             <ion-input style="height:35px" type="number" ngModel name="number" id="number"
-              placeholder="{{Globale?.Translate?.number}}" value="{{formdata?.number}}"></ion-input>
+              placeholder="{{Globale?.Translate?.pnumero}}" value="{{formdata?.number}}"></ion-input>
           </div>
         </ion-item>
         <ion-item lines="none">
@@ -32,7 +32,7 @@
         </ion-item>
         <ion-item lines="none">
           <div style="width: 100%;border: 1px solid black;padding-left: 5px;margin-right: 7px;">
-            <ion-input style="height:35px" ngModel name="password" placeholder="{{Globale.Translate?.cpassword}}"
+            <ion-input style="height:35px" ngModel name="cpassword" placeholder="{{Globale.Translate?.cpassword}}"
               [type]="cshowPassword ? 'text' : 'password'" clearOnEdit="false" value="{{formdata?.cpassword}}">
               <ion-icon class="show" [name]="showPassword ? 'eye-off' : 'eye'" (click)="oncPasswordToggle()"></ion-icon>
             </ion-input>
@@ -41,7 +41,7 @@
         <ion-item lines="none">
           <div style="width: 100%;border: 1px solid black;padding-left: 5px;margin-right: 7px;">
             <ion-input style="height:35px" type="text" ngModel name="prenom" placeholder="{{Globale.Translate?.prenom}}"
-              value="{{formdata?.prenom}}" id="nom"></ion-input>
+              value="{{formdata?.prenom}}" id="prenom"></ion-input>
           </div>
         </ion-item>
         <ion-item lines="none">

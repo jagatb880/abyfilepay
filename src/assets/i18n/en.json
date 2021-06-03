@@ -78,7 +78,7 @@
 }
 ,"identifie":
 {
-"continue":"Continue","cpassword":"Confirm password","daten":"Birth Date","femi":"Female","lieu":"Birth Place","masc":"Male","nom":"Last name","numero":"Number","password":"Password","prenom":"Name","profession":"Profession","sexe":"Gender","titre":"Personal informations"
+"continue":"Continue","cpassword":"Confirm password","daten":"Birth Date","femi":"Female","lieu":"Birth Place","masc":"Male","nom":"Last name","numero":"Number","pnumero":"Phone number","password":"Password","prenom":"Name","profession":"Profession","sexe":"Gender","titre":"Personal informations"
 }
 ,"localise":
 {
