@@ -1,18 +1,18 @@
 <script src="md5.js"></script>
 <ion-content padding>
-  <ion-grid>
+  <!-- <ion-grid>
     <ion-row>
       <ion-col text-right>
         <ion-text (click)="Globale.navigate('/contact')">{{Globale?.Translate.forget}}</ion-text>
       </ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid> -->
   <div class="home-image" text-center>
-    <img src="/assets/logo/home-logo.png" alt="" class="imge" style="width: 120px;" />
+    <img src="/assets/logo/home-logo.png" alt="" class="imge" style="width: 62%;" />
   </div>
-  <div style="margin-right: 20px;margin-left: 20px;margin-top: 40px;">
+  <div>
     <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-      <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <!-- <ion-list lines="full" class="ion-no-margin ion-no-padding">
         <ion-grid>
   
           <ion-row>
@@ -25,7 +25,7 @@
                 </ion-buttons>
               </ion-item>
   
-              <ion-item lines="none">
+              <ion-item lines="none"> -->
                 <!-- <ion-label>{{Globale?.Translate?.numbers}} </ion-label> -->
                 <!-- <ion-select #C ngModel name="number" (ionChange)="nouveau(C.value)" *ngIf="!Nouveau"
                   okText="{{Globale?.Translate.btncontinue}}" cancelText="{{Globale?.Translate.btncancel}}"
@@ -33,7 +33,7 @@
                   <ion-select-option value="{{p}}" *ngFor="let p of Logins">{{p}}</ion-select-option>
                   <ion-select-option value="new_account">{{Globale?.Translate?.newcompte}}</ion-select-option>
                 </ion-select> -->
-                <div style="width: 100%;border: 1px solid black;padding-left: 5px;">
+                <!-- <div style="width: 100%;border: 1px solid black;padding-left: 5px;">
                   <ion-input style="height:35px" type="number" ngModel name="number" id="number" placeholder="{{Globale?.Translate?.number}}"
                   value="{{LastLogin}}" *ngIf="Nouveau"></ion-input>
                 </div>
@@ -47,13 +47,13 @@
                   <ion-input style="height:35px" type="{{passtype}}" ngModel name="password" id="password" placeholder="{{Globale?.Translate?.password}}">
                   <ion-icon class="show" [name]="passeye" (click)="managePassword()"></ion-icon>
                   </ion-input>
-                </div>
+                </div> -->
                 <!-- <input type="{{passtype}}" ngModel name="password" id="password"
                   placeholder="{{Globale?.Translate?.password}}">
                 <button ion-button clear class="eye-icon-btn" type="button" item-right (click)="managePassword()">
                   <ion-icon name="{{passeye}}"></ion-icon>
                 </button> -->
-              </ion-item>
+              <!-- </ion-item>
             </ion-col>
           </ion-row>
           <div style="margin-top: 20px;margin-bottom: 20px;">
@@ -80,11 +80,99 @@
               </ion-col>
             </ion-row>
           </div>
-        </ion-grid>
-      </ion-list>
+        </ion-grid> -->
+      <!-- </ion-list> -->
+
+      <div class="div1">
+        <ion-item style="
+        --background: #005693;--border-style: none;">
+          <ion-icon name="person-sharp" color="danger"></ion-icon>
+          <ion-input style="height:35px;--placeholder-color: #47b0ff;" type="number" ngModel name="number" id="number" placeholder="{{Globale?.Translate?.number}}"
+                        value="{{LastLogin}}" *ngIf="Nouveau"></ion-input>
+        </ion-item>
+        <ion-item style="--border-style: none;
+        margin-top: 13px;
+        --background: #005693;">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-input style="height:35px;--placeholder-color: #47b0ff;" type="{{passtype}}" ngModel name="password" id="password" placeholder="{{Globale?.Translate?.password}}">
+            </ion-input>
+        </ion-item>
+        <ion-row style="margin-top: 10px;">
+          <ion-col size="1">
+            <input type="checkbox">
+          </ion-col>
+          <ion-col size="4">
+            <p style="font-size: 12px;
+            margin: 0;color: white;">Remember me</p>
+          </ion-col>
+          <ion-col size="7">
+            <p style="margin: 0;
+            text-align: end;
+            color: white;" (click)="Globale.navigate('/contact')">{{Globale?.Translate.forget}}</p>
+          </ion-col>
+        </ion-row>
+        
+        <ion-button  expand="full" class="submit-btn" type="submit" style="text-transform: none;--background:#be0100">{{Globale?.Translate?.connect}}
+        </ion-button>
+      </div>
+      <div style="margin: 31px 36px 0px 36px;">
+        <ion-item (click)="presentPopover(langues)" style="border: 2px solid #27a8de;--border-style: none;">
+          <img src="{{langue?.logo}}" alt="" class="image-icone" hspace="4" vspace="4" />
+          {{langue?.nom}}
+          <ion-buttons slot="end">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+            <!-- <ion-icon name="caret-down-outline"></ion-icon> -->
+          </ion-buttons>
+        </ion-item>
+      
+        <ion-button expand="full" class="submit-btn" type="button" style="text-transform: none;margin-top: 21px;--background:#be0100"
+                        (click)="Globale.navigate('/suscribe')">{{Globale?.Translate?.besoin}}</ion-button>
+      </div>
     </form>
   </div>
   
+<!-- <div class="div1">
+  <ion-item style="
+  --background: #005693;--border-style: none;">
+    <ion-icon name="person-sharp"></ion-icon>
+    <ion-input style="height:35px;--placeholder-color: #47b0ff;" type="number" ngModel name="number" id="number" placeholder="{{Globale?.Translate?.number}}"
+                  value="{{LastLogin}}" *ngIf="Nouveau"></ion-input>
+  </ion-item>
+  <ion-item style="--border-style: none;
+  margin-top: 13px;
+  --background: #005693;">
+    <ion-icon name="lock-closed-outline"></ion-icon>
+    <ion-input style="height:35px;--placeholder-color: #47b0ff;" type="{{passtype}}" ngModel name="password" id="password" placeholder="{{Globale?.Translate?.password}}">
+      </ion-input>
+  </ion-item>
+  <ion-row style="margin-top: 10px;">
+    <ion-col size="1">
+      <input type="checkbox">
+    </ion-col>
+    <ion-col size="4">
+      <p style="font-size: 12px;
+      margin: 0;color: white;">Remember me</p>
+    </ion-col>
+    <ion-col size="7">
+      <p style="margin: 0;
+      text-align: end;
+      color: white;" (click)="Globale.navigate('/contact')">{{Globale?.Translate.forget}}</p>
+    </ion-col>
+  </ion-row>
+  
+  <ion-button color="danger" expand="full" class="submit-btn" type="submit" style="text-transform: none;">{{Globale?.Translate?.connect}}
+  </ion-button>
+</div>
+<div style="margin: 31px 36px 0px 36px;">
+  <ion-item (click)="presentPopover(langues)" style="border: 2px solid #27a8de;--border-style: none;">
+    <img src="{{langue?.logo}}" alt="" class="image-icone" hspace="4" vspace="4" />
+    {{langue?.nom}}
+    <ion-buttons slot="end">
+      <ion-icon name="arrow-dropdown"></ion-icon>
+    </ion-buttons>
+  </ion-item>
 
-
+  <ion-button color="danger" expand="full" class="submit-btn" type="button" style="text-transform: none;margin-top: 21px;"
+                  (click)="Globale.navigate('/suscribe')">{{Globale?.Translate?.besoin}}</ion-button>
+</div> -->
 </ion-content>
