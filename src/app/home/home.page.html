@@ -15,10 +15,10 @@
       </ion-header>
       <ion-content>
         <ion-list>
-          <ion-item *ngIf="Session?.Menu.Perso">
+          <!-- <ion-item *ngIf="Session?.Menu.Perso">
           <ion-label color="dark">
             <b>{{Globale?.Translate.mcompte}}</b>
-          </ion-label>
+          </ion-label> -->
         </ion-item>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of Session?.Menu.Perso">
             <ion-item [routerDirection]="'root'" (click)="moveToPage(p.url)">

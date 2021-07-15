@@ -88,7 +88,7 @@ export class HomePage
 
 			this.router.navigate(["/login", {time:this.Now}]);
 		}
-		this.Globale.getSolde();
+		// this.Globale.getSolde();
 		
 	}
 	

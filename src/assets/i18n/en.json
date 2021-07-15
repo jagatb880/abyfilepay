@@ -86,7 +86,7 @@
 }
 ,"login":
 {
-"besoin":"Create an account","choix":"Choose a language","connect":"Connect","forget":"Forgot password","french":"French","newcompte":"New account","number":"Phone number/ID","numbers":"My numbers","password":"Password","souhait":"Would you like to use a new account"
+"besoin":"Need an account","choix":"Choose a language","connect":"Login","forget":"Forgot password","french":"French","newcompte":"New account","username":"Username","number":"Phone number/ID","numbers":"My numbers","password":"Password","souhait":"Would you like to use a new account"
 }
 ,"mouvement":
 {
@@ -122,7 +122,7 @@
 }
 ,"suscribe":
 {
-"agent":"Agent account","partner":"Partner (Super Agent)","marchant":"Marchant Account","perso":"Personal account","titre":"Create your account","type":"Account Type","welcome":"Welcome to ABYFOUPAY"
+"agent":"Agent account","partner":"Become a Partner","marchant":"Marchant Account","perso":"Personal account","titre":"Create your account","type":"Type of Account","welcome":"Welcome to Flash Pay"
 }
 ,"transactiondetail":
 {

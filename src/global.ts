@@ -7,7 +7,8 @@ import * as CryptoJS from 'crypto-js';
 import {TranslateService} from "@ngx-translate/core";
 
 //export const APP_URL = "http://localhost/web/vps.abyfou.cm/";
-export const APP_URL = "https://cm.abyfoupay.com/"; 
+// export const APP_URL = "https://cm.abyfoupay.com/"; 
+export const APP_URL = 'https://s3papi.cmstaging.smobilpay.net/v2/'
 export const APP_SESSION = "FlashPay";
 export const APP_VERSION = "1.0.2";
 export const BASE_URL= APP_URL+"live/";////18.130.13.165/";

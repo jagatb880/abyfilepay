@@ -34,7 +34,7 @@
           <div style="width: 100%;border: 1px solid black;padding-left: 5px;margin-right: 7px;">
             <ion-input style="height:35px" ngModel name="cpassword" placeholder="{{Globale.Translate?.cpassword}}"
               [type]="cshowPassword ? 'text' : 'password'" clearOnEdit="false" value="{{formdata?.cpassword}}">
-              <ion-icon class="show" [name]="showPassword ? 'eye-off' : 'eye'" (click)="oncPasswordToggle()"></ion-icon>
+              <ion-icon class="show" [name]="cshowPassword ? 'eye-off' : 'eye'" (click)="oncPasswordToggle()"></ion-icon>
             </ion-input>
           </div>
         </ion-item>
